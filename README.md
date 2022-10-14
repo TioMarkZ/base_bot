@@ -52,3 +52,8 @@ cd base_bot
 npm i
 node .
 ```
+## Construir novos comandos  
+Para criar comandos **com prefixo**, olhe [Essa Base](https://github.com/HACKERESOBERANO/base_bot/blob/main/bat.js#L159), apenas remova a "/\*" e "\*/", insira os detalhes no código.  
+  
+Para obter todas as funções que esta base pode rodar, acesse a [Página da Baileys](https://adiwajshing.github.io/Baileys/).  
+  
