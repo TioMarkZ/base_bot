@@ -30,7 +30,7 @@
    
 # Suporte e grupo: <a href="https://linktr.ee/karmabot"><img alt="WhatsApp" src="https://img.shields.io/badge/-Whatsapp%20Group-lightgrey?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=BEM-VINDO+AO+KARMA+MD+BASE+BOT.;CREATED+BY+MAWY+DEV;BEST+MULTIDEVICE+WA+BOT;OBRIGADO+POR+VISITAR+MEU+GIT)](https://git.io/typing-svg)
+## [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=800&color=1413F7&width=435&lines=MELHOR+BOT+BASE+NOVA;CRIADA+POR+MAWY+DEV;OBRIGADO+POR+ESTAR+AQUI)](https://git.io/typing-svg)(https://git.io/typing-svg)
 
  </a>
 
