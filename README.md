@@ -14,7 +14,7 @@
 
 </div>
 
-#### <p align="center">By Mawy DEV | © | Reserved  </br> 
+#### <p align="center"> By Mawy DEV | © | Reserved  </br> 
 
 # KARMA BASE VIRGEM - MD
 #### TOTAL REPO VIEWS📍
@@ -30,7 +30,7 @@
    
 # Suporte e grupo: <a href="https://linktr.ee/karmabot"><img alt="WhatsApp" src="https://img.shields.io/badge/-Whatsapp%20Group-lightgrey?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=BEM-VINDO+AO+KARMA+MD+BASE+BOT.;CREATED+BY+MAWY+DEV;BEST+MULTIDEVICE+WA+BOT;THANKS+FOR+VISITING+MY+GIT)](https://git.io/typing-svg)
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=BEM-VINDO+AO+KARMA+MD+BASE+BOT.;CREATED+BY+MAWY+DEV;BEST+MULTIDEVICE+WA+BOT;OBRIGADO+POR+VISITAR+MEU+GIT)](https://git.io/typing-svg)
 
  </a>
 
@@ -38,9 +38,7 @@
 
  ## Meu Website: [Clique Aqui](linktr.ee/karmabot)
 
-1. MODELO DE QR CODE [SCAN](https://astro-qr.astromdqr.repl.co/) 
-
-2. PARA EDITAR NO SEU GITHUB [FORK](https://github.com/HACKERESOBERANO/base_bot/fork)
+1. PARA EDITAR NO SEU GITHUB [FORK](https://github.com/HACKERESOBERANO/base_bot/fork)
 
 ## INSTALAÇÃO NO TERMUX/UBUNTU/SSH
 
