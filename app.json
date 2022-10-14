@@ -1,0 +1,7 @@
+{
+	"name": "BASE-MD",
+	"description": "Uma base em md totalmente virgem",
+	"repository": "https://github.com/HACKERESOBERANO/base_bot",
+	"logo": "https://node-js-sample.herokuapp.com/node.png",
+	"keywords": ["multi-device"]
+}

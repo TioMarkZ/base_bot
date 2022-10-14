@@ -1,0 +1,46 @@
+{
+  "name": "private-bot",
+  "version": "1.2.3",
+  "description": "Bot de whatsapp usando a baileys",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "termux",
+    "whatsapp",
+    "2022",
+    "wabase-md",
+    "base",
+    "baileys-md",
+    "bot"
+  ],
+  "author": "Markos_Wythor.",
+  "license": "MIT",
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.4.0",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "awesome-phonenumber": "^2.64.0",
+    "chalk": "^4.1.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "human-readable": "^0.2.1",
+    "jimp": "^0.16.1",
+    "moment-timezone": "^0.5.37",
+    "node-webpmux": "^3.1.0",
+    "path": "^0.12.7",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HACKERESOBERANO/botvip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HACKERESOBERANO/botvip/issues"
+  },
+  "homepage": "https://github.com/HACKERESOBERANO/botvip#readme"
+}
