@@ -1,6 +1,6 @@
 {
-  "name": "private-bot",
-  "version": "1.2.3",
+  "name": "base_bot",
+  "version": "1.0.2",
   "description": "Bot de whatsapp usando a baileys",
   "main": "index.js",
   "type": "commonjs",
@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HACKERESOBERANO/botvip.git"
+    "url": "git+https://github.com/HACKERESOBERANO/base_bot.git"
   },
   "bugs": {
-    "url": "https://github.com/HACKERESOBERANO/botvip/issues"
+    "url": "https://github.com/HACKERESOBERANO/base_bot/issues"
   },
-  "homepage": "https://github.com/HACKERESOBERANO/botvip#readme"
+  "homepage": "https://github.com/HACKERESOBERANO/base_bot#readme"
 }
