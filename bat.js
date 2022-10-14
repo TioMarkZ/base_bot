@@ -51,9 +51,6 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
     	const batdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
         
 
-	 //----------------------------- MENSAGENS PARA USAR EX mess.only.admins ------------------------------------\\
-    
-
         
 
         // PUXANDO AS MENSAGENS PARA O CONSOLE
@@ -63,7 +60,7 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
         if (!m.isGroup && m.isGroup && m.sender) console.log(`${color('╭━━━━━━━━━━━━━━━━━━━━━━━━━╮', 'gold')}\n${color('┃', 'gold')} ${color('Número:', 'yellow')} ${color(m.sender.split('@')[0], 'magenta')}\n${color('┃', 'gold')} ${color('Nome:', 'yellow')} ${color(pushname, 'purple')}\n${color('┃', 'gold')} ${color('Data:', 'yellow')} ${color(time, 'magenta')}\n${color('┃', 'gold')} ${color('Comando:', 'yellow')} ${color('Não', 'red')}\n${color('┃', 'gold')} ${color('Palavras:', 'yellow')} ${color(budy.length, 'magenta')}\n${color('┃', 'gold')} ${color('Grupo:', 'yellow')} ${color(groupName, 'magenta')}\n${color('╰━━━━━━━━━━━━━━━━━━━━━━━━━╯', 'gold')}`)        
 
 
-        // Respon Cmd with media
+        // IDENTIFICAR UM COMANDO COM MIDIA
         if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.sticker)) {
         let hash = global.db.sticker[m.msg.fileSha256.toString('base64')]
         let { text, mentionedJid } = hash
@@ -82,6 +79,10 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
         }
         bat.ev.emit('messages.upsert', msg)
         }
+	    
+	    
+	 //----------------------------- MENSAGENS APENAS DE TESTE - COMANDOS SEM CASE ------------------------------------\\
+    
 
         if (budy.startsWith("1") || budy.startsWith("1️⃣") || budy.startsWith("faq")) {
             if (!m.key.fromMe && !isCmd){
@@ -128,7 +129,9 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
                 }
     
 
-            if (budy.toLowerCase().includes("oi bot") || budy.toLowerCase().includes("start")) {
+            if (budy.toLowerCase().includes("oi bot") || budy.toLowerCase().includes("start")) { 
+	    // explicação desta condição : se o budy toLowerCase(diminui a fonte q recebe) estiver incluso o "oi bot" ou "start" faça:
+		    
                 if (!m.key.fromMe && !isCmd){
                 if (m.isGroup) return
                 let buttonse = [
@@ -146,16 +149,20 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
                 bat.sendMessage(m.chat, {text: 'Ou digite uma das opções:\n\n1️⃣ - ver meu FAQ e tirar duvidas agora mesmo.\n2️⃣ - falar com o suporte'})
                 }
                 }
-        switch(command) {
+	//-------------------- INICIO DAS CASES -----------------------\\
+        switch(command) { // ñ apaga isso
+	
+	case 'start': case 'menu': case 'iniciar': case 'help':
+	  m.reply('acabei de ser criado 🤖\n\ndigite: "start" ou "oi bot"')
+	break
 
-
-
-
-//-------------------- FIM DAS CASES -----------------------\\
-    case 'start': case 'menu': case 'iniciar': case 'help':
-	m.reply('acabei de ser criado 🤖')
-break
-            default:
+	//caso queira criar um comando remova o /* e o */
+	/*case 'comando':
+	// a case é o nome do comando sem espaço ou letras maiusculas.
+	 m.reply("sua resposta")
+	break*/
+			
+            default: // default é onde acaba as cases
                 
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return m.reply(mess.owner)
