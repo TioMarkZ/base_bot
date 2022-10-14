@@ -50,7 +50,7 @@ apt install ffmpeg -y
 git clone https://github.com/HACKERESOBERANO/base_bot/
 cd base_bot
 npm i
-node .
+node . ou sh start.sh
 ```
 ## Construir novos comandos  
 Para criar comandos **com prefixo**, olhe [Essa Base](https://github.com/HACKERESOBERANO/base_bot/blob/main/bat.js#L159), apenas remova a "/\*" e "\*/", insira os detalhes no código.  
