@@ -36,7 +36,7 @@
 
 </p>
 
- ## 🔗 Meu Website: [Clique Aqui](linktr.ee/karmabot)
+ ## 🔗 Meu Website: [Clique Aqui](https://linktr.ee/karmabot)
 
 1. PARA EDITAR NO SEU GITHUB [FORK](https://github.com/HACKERESOBERANO/base_bot/fork)
 
