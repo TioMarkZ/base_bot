@@ -16,8 +16,8 @@
 
 #### <p align="center"> By Mawy DEV | © | Reserved  </br> 
 
-# KARMA BASE VIRGEM - MD
-#### TOTAL REPO VIEWS📍
+# ⚡ KARMA BASE VIRGEM - MD
+#### TOTAL REPO VIEWS 📍
 ![Visitor Count](https://profile-counter.glitch.me/karmarobotbasevirgem/count.svg)
 
     [©] Karma BASEBOT-MD
@@ -36,11 +36,11 @@
 
 </p>
 
- ## Meu Website: [Clique Aqui](linktr.ee/karmabot)
+ ## 🔗 Meu Website: [Clique Aqui](linktr.ee/karmabot)
 
 1. PARA EDITAR NO SEU GITHUB [FORK](https://github.com/HACKERESOBERANO/base_bot/fork)
 
-## INSTALAÇÃO NO TERMUX/UBUNTU/SSH
+## ⚠ INSTALAÇÃO NO TERMUX/UBUNTU/SSH
 
 ```bash
 apt update && apt upgrade
