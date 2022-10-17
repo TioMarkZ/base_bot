@@ -41,7 +41,9 @@ async function startHisoka() {
         printQRInTerminal: true,
         browser: ['BAHIA ZN BOT MD 🤖','Safari','1.0.0'],
         auth: state,
-        version: getVersionWaweb() || [2, 2204, 13]
+        version: getVersionWaweb() || [2, 2204, 13],
+	defaultQueryTimeoutMs: undefined
+	    
     })
 
     store.bind(bat.ev)
