@@ -60,26 +60,7 @@ module.exports = bat = async (bat, m, chatUpdate, store) => {
         if (!m.isGroup && m.isGroup && m.sender) console.log(`${color('╭━━━━━━━━━━━━━━━━━━━━━━━━━╮', 'gold')}\n${color('┃', 'gold')} ${color('Número:', 'yellow')} ${color(m.sender.split('@')[0], 'magenta')}\n${color('┃', 'gold')} ${color('Nome:', 'yellow')} ${color(pushname, 'purple')}\n${color('┃', 'gold')} ${color('Data:', 'yellow')} ${color(time, 'magenta')}\n${color('┃', 'gold')} ${color('Comando:', 'yellow')} ${color('Não', 'red')}\n${color('┃', 'gold')} ${color('Palavras:', 'yellow')} ${color(budy.length, 'magenta')}\n${color('┃', 'gold')} ${color('Grupo:', 'yellow')} ${color(groupName, 'magenta')}\n${color('╰━━━━━━━━━━━━━━━━━━━━━━━━━╯', 'gold')}`)        
 
 
-        // IDENTIFICAR UM COMANDO COM MIDIA
-        if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.sticker)) {
-        let hash = global.db.sticker[m.msg.fileSha256.toString('base64')]
-        let { text, mentionedJid } = hash
-        let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {
-            userJid: bat.user.id,
-            quoted: m.quoted && m.quoted.fakeObj
-        })
-        messages.key.fromMe = areJidsSameUser(m.sender, bat.user.id)
-        messages.key.id = m.key.id
-        messages.pushName = m.pushName
-        if (m.isGroup) messages.participant = m.sender
-        let msg = {
-            ...chatUpdate,
-            messages: [proto.WebMessageInfo.fromObject(messages)],
-            type: 'append'
-        }
-        bat.ev.emit('messages.upsert', msg)
-        }
-	    
+  
 	    
 	 //----------------------------- MENSAGENS APENAS DE TESTE - COMANDOS SEM CASE ------------------------------------\\
     
