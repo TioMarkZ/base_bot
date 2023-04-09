@@ -25,7 +25,7 @@ global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
 async function startBat() {
-    const { state, saveCreds } = await useMultiFileAuthState(`./${sessionName}.json`)
+    const { state, saveCreds } = await useMultiFileAuthState(`./${sessionName}`)
 
    
     const bat = batConnect({
