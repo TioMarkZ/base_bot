@@ -11,8 +11,8 @@ Agradeço pela compreensão.
 */
 
 require('./config')
-const { default: batConnect, useSingleFileAuthState, DisconnectReason, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
+const { default: batConnect, useMultiFileAuthState, DisconnectReason, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+
 const pino = require('pino')
 const fs = require('fs')
 const FileType = require('file-type')
@@ -24,30 +24,19 @@ global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.
 
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
-const getVersionWaweb = () => {
-    let version
-    try {
-        let a = fetchJson('https://web.whatsapp.com/check-update?version=1&platform=web')
-        version = [a.currentVersion.replace(/[.]/g, ', ')]
-    } catch {
-        version = [2, 2204, 13]
-    }
-    return version
-}
+async function startBat() {
+    const { state, saveCreds } = await useMultiFileAuthState(`./${sessionName}.json`)
 
-async function startHisoka() {
+   
     const bat = batConnect({
-        logger: pino({ level: 'silent' }),
-        printQRInTerminal: true,
-        browser: ['BAHIA ZN BOT MD 🤖','Safari','1.0.0'],
+        logger: pino({ level: "silent" }),
+	browser: ['BASE BOT MD 🤖','Safari','1.0.0'],
+        generateHighQualityLinkPreview: true,
         auth: state,
-        version: getVersionWaweb() || [2, 2204, 13],
-	defaultQueryTimeoutMs: undefined
-	    
-    })
+        printQRInTerminal: true,
+      })
 
     store.bind(bat.ev)
-
     
     bat.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
@@ -115,17 +104,22 @@ async function startHisoka() {
     bat.public = true
 
     bat.serializeM = (m) => smsg(bat, m, store)
-
-    bat.ev.on('connection.update', async (update) => {
-        const { connection, lastDisconnect } = update
-        if (connection === 'close') {
-            lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut ? startHisoka() : console.log('Koneksi Terputus...')
+   
+      bat.ev.on("creds.update", saveCreds)
+      bat.ev.on("connection.update", (status) => {
+        const { connection, lastDisconnect } = status
+        if(connection === "close") {
+          console.log("Error Connection:", lastDisconnect.error)
+          const tryConnect = lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut
+          if(tryConnect) {
+            startBat()
+          }
         }
-        console.log(`${color('[ ESTOU CHECANDO SUA CONEXÃO ]', 'purple')}`, update)
-        // console.log('[ ESTOU CHECANDO SUA CONEXÃO ]', update)
-    })
+        if(connection === "open") {
+          console.log("✅ Success !")
+        }
+      })
 
-    bat.ev.on('creds.update', saveState)
 
     // Add Other
     /** Send Button 5 Image
@@ -445,7 +439,7 @@ async function startHisoka() {
     return bat
 }
 
-startHisoka()
+startBat()
 
 
 let file = require.resolve(__filename)
