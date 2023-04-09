@@ -14,7 +14,7 @@ const fs = require('fs')
 
 // Other
 global.owner = ['55xxxxxxxxxx','559491423691']
-global.sessionName = 'bahiaSE'
+global.sessionName = 'arquivos_session'
 global.prefa = ['/']
 global.sp = '⭔'
 global.mess = {
