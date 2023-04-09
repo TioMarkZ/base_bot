@@ -53,7 +53,7 @@ npm i
 node . ou sh start.sh
 ```
 ## Construir novos comandos  
-Para criar comandos **com prefixo**, olhe [Essa Base](https://github.com/HACKERESOBERANO/base_bot/blob/main/bat.js#L159), apenas remova a "/\*" e "\*/", insira os detalhes no código.  
+Para criar comandos **com prefixo**, olhe [Essa Base](https://github.com/HACKERESOBERANO/base_bot/blob/main/bat.js#L140), apenas remova a "/\*" e "\*/", insira os detalhes no código.  
   
 Para obter todas as funções que esta base pode rodar, acesse a [Página da Baileys](https://adiwajshing.github.io/Baileys/).  
   
