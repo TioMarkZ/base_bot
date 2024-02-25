@@ -19,7 +19,7 @@
   "author": "Markos_Wythor.",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys": "^5.0.0",
+    "@adiwajshing/baileys": "npm:@queenanya/baileys@^6.8.2",
     "@adiwajshing/keyed-db": "^0.2.4",
     "awesome-phonenumber": "^2.64.0",
     "chalk": "^4.1.2",
